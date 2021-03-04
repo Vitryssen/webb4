@@ -1,12 +1,19 @@
 <?php
+session_start();
 $page_title = "Gästbok";
 include("includes/header.php");
 include("includes/centerContent.php");
+require_once('classes/handler.php');
+require_once('classes/post.php');
+/*if(isset($_SESSION['handler'])){
+    $Handler = unserialize($_SESSION['handler']);
+    echo sizeof($Handler->posts);
+}*/
 ?>
 
 <h1> Andrés gästbok</h1>
 
-<form action="/guestbook/index.php" method="post">
+<form action="functions/addPost.php" method="post">
 <p>
 Namn: <br><input type="text" name="author">
 </p>
@@ -17,9 +24,9 @@ Meddelande:<br> <textarea cols="40" rows="2" name="message"></textarea>
 <input type="submit" name="addPost" value="Skapa Inlägg" class="btn">
 </p>
 </form>
-
-</section> <!--End of center content-->
+<a href="tmp/data.txt" target="_blank">Visa datafil</a>
 <?php
+include("functions/printPosts.php");
 include("includes/guestInput.php");
 include("includes/footer.php");
 ?>
