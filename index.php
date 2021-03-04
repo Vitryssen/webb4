@@ -1,6 +1,7 @@
 <?php
 $page_title = "Startsida";
 include("includes/header.php");
+include("includes/leftContent.php");
 ?>
 
 <h2>Startsidan</h2>
@@ -24,3 +25,4 @@ include("includes/header.php");
 <?php
 include("includes/sidebar.php");
 include("includes/footer.php");
+?>

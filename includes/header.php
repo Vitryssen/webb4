@@ -1,8 +1,8 @@
 <?php include("includes/config.php"); 
-session_start();
+/*session_start();
 if (!isset($_SESSION["uname"])) {
     header("location: login.php");
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -18,11 +18,9 @@ if (!isset($_SESSION["uname"])) {
             <nav id="mainmenu">
                 <ul>
                     <li><a href="index.php">Hem</a></li>
-                    <li><a href="omsidan.php">Del 3</a></li>
-                    <li><a href="kontakt.php">Kontakt</a></li>
+                    <li><a href="omsidan.php">Information</a></li>
+                    <li><a href="guest.php">Gästbok</a></li>
                     <li><a href="functions/logout.php">Logga ut</a></li>
                 </ul>
             </nav>
         </header>
-
-        <section id="leftcontent">
