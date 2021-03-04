@@ -5,10 +5,13 @@ include("includes/header.php");
 include("includes/centerContent.php");
 require_once('classes/handler.php');
 require_once('classes/post.php');
-/*if(isset($_SESSION['handler'])){
-    $Handler = unserialize($_SESSION['handler']);
-    echo sizeof($Handler->posts);
-}*/
+if(!isset($_SESSION['handler'])){
+    $handler = new Handler();
+    $_SESSION['handler'] = serialize($handler);
+}
+if(isset($_GET['delPost'])){
+    include("functions/deletePost.php");
+}
 ?>
 
 <h1> Andrés gästbok</h1>
@@ -24,7 +27,7 @@ Meddelande:<br> <textarea cols="40" rows="2" name="message"></textarea>
 <input type="submit" name="addPost" value="Skapa Inlägg" class="btn">
 </p>
 </form>
-<a href="tmp/data.txt" target="_blank">Visa datafil</a>
+<a href="../writeable/rawData" target="_blank">Visa datafil</a>
 <?php
 include("functions/printPosts.php");
 include("includes/guestInput.php");

@@ -14,6 +14,7 @@ if(isset($_REQUEST['author']) && isset($_REQUEST['message'])){
         $Shop->addPost(new Post($_REQUEST['author'], $_REQUEST['message'], date('m/d/Y H:i:s', time())));
         unset($_REQUEST['author']);
         unset($_REQUEST['message']);
+        $Shop->savePosts();
         $_SESSION['handler'] = serialize($Shop);
     }
 }
