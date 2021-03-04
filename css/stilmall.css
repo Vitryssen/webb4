@@ -1,6 +1,19 @@
 body {
     margin: 0px;
 }
+#deleteBtn{
+    background-color: #db3d16;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 16px;
+    cursor: pointer;
+}
 #sidebar {
     float: right;
     width: 20%;
