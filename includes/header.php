@@ -23,7 +23,8 @@ if (!isset($_SESSION["uname"])) {
                 <ul>
                     <li><a href="index.php">Hem</a></li>
                     <li><a href="omsidan.php">Information</a></li>
-                    <li><a href="guest.php">Gästbok</a></li>
+                    <li><a href="guest.php">Gästbok del 1</a></li>
+                    <li><a href="dbGuest.php">Gästbok del 2</a></li>
                     <li><a href="functions/logout.php">Logga ut</a></li>
                 </ul>
             </nav>
