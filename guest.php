@@ -1,6 +1,6 @@
 <?php
 session_start();
-$page_title = "Gästbok";
+$page_title = "Gästbok Fil";
 include("includes/header.php");
 include("includes/centerContent.php");
 require_once('classes/handler.php');

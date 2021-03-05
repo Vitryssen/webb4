@@ -1,5 +1,5 @@
 <?php
-include "../config/Dbconfig.php";
+include_once(__DIR__."/../config/Dbconfig.php");
 class Database extends Dbconfig{
     public $connectionString;
     public $dataSet;
@@ -10,7 +10,7 @@ class Database extends Dbconfig{
     protected $userName;
     protected $password;
 
-    function Mysql() {
+    function __construct() {
         $this -> connectionString = NULL;
         $this -> sqlQuery = NULL;
         $this -> dataSet = NULL;

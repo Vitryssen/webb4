@@ -3,6 +3,7 @@ class Post {
     private $username;
     private $text;
     private $date;
+    private $id;
     public function __construct($u, $t, $d){
         $this->username = $u;
         $this->text = $t;

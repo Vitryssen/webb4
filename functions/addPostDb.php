@@ -2,8 +2,8 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once('../classes/dbHandler.php');
-require_once('../classes/post.php');
+include('../classes/dbHandler.php');
+include('../classes/post.php');
 session_start();
 $Shop = new dbHandler();
 if(isset($_SESSION['dbhandler'])){
@@ -14,5 +14,5 @@ if(isset($_REQUEST['author']) && isset($_REQUEST['message'])){
         $Shop->addPost(new Post($_REQUEST['author'], $_REQUEST['message'], date('m/d/Y H:i:s', time())));
     }
 }
-//header("location: ../guest.php");
+header("location: ../dbGuest.php");
 ?>
