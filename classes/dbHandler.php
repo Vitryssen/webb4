@@ -30,7 +30,6 @@ class dbHandler extends Database{
         }
     }
     public function showPosts(){
-        $this->fetchPosts();
         $tempPosts = $this->posts;
         if(count($tempPosts) > 0){
             $index = 0;
