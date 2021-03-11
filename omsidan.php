@@ -1,7 +1,7 @@
 <?php
 $page_title = "Del 3";
 include("includes/header.php");
-include("includes/leftContent.php");
+echo "<section id='leftcontent'>";
 include("includes/del3.php");
 ?>
 

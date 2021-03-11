@@ -1,4 +1,4 @@
-</section><!-- /leftcontent -->
+</section>
 
 <section id="sidebar">
     <h2>Höger kolumn</h2>

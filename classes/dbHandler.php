@@ -37,7 +37,7 @@ class dbHandler extends Database{
                 echo "<p>".$currentPost->username."</p>";
                 echo "<p>".$currentPost->text."</p>";
                 echo "Publicerat ".$currentPost->date;
-                echo "<a href='dbGuest.php?delPostDb=".$currentPost->id."' id='deleteBtn'>Radera Inlägg </a>";
+                echo "<a href='dbGuest.php?delPostDb=".$currentPost->id."' class='deleteBtn'>Radera Inlägg </a>";
                 echo "<p style='border-bottom:1px solid black;'></p>";
                 $index++;
             }

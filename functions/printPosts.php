@@ -8,7 +8,7 @@ if(isset($_SESSION['handler'])){
             echo "<p>".$currentPost->username."</p>";
             echo "<p>".$currentPost->text."</p>";
             echo "Publicerat ".$currentPost->date;
-            echo "<a href='guest.php?delPost=".$index."' id='deleteBtn'>Radera Inlägg </a>";
+            echo "<a href='guest.php?delPost=".$index."' class='deleteBtn'>Radera Inlägg </a>";
             echo "<p style='border-bottom:1px solid black;'></p>";
             $index++;
         }

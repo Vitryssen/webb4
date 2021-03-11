@@ -2,7 +2,6 @@
 session_start();
 $page_title = "Gästbok Databas";
 include("includes/header.php");
-include("includes/centerContent.php");
 include("config/Dbconfig.php");
 include('classes/dbHandler.php');
 include('classes/post.php');
@@ -19,7 +18,7 @@ if(isset($_GET['delPostDb']) && isset($_SESSION['dbHandler'])){
     $dbHandler->deletePost($_GET['delPostDb']);
 }
 ?>
-
+<section id="centercontent">
 <h1> Andrés gästbok</h1>
 
 <form action="functions/addPostDb.php" method="post">
@@ -38,6 +37,6 @@ if(isset($_SESSION['dbHandler'])){
     $dbHandler = unserialize($_SESSION['dbHandler']);
     $dbHandler->showPosts();
 }
-include("includes/guestInput.php");
+echo "</section>";
 include("includes/footer.php");
 ?>

@@ -1,9 +1,8 @@
 <?php
 $page_title = "Startsida";
 include("includes/header.php");
-include("includes/leftContent.php");
 ?>
-
+<section id="leftcontent">
 <h2>Startsidan</h2>
 
 <dl>

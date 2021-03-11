@@ -2,7 +2,6 @@
 session_start();
 $page_title = "Gästbok Fil";
 include("includes/header.php");
-include("includes/centerContent.php");
 require_once('classes/handler.php');
 require_once('classes/post.php');
 if(!isset($_SESSION['handler'])){
@@ -13,7 +12,7 @@ if(isset($_GET['delPost'])){
     include("functions/deletePost.php");
 }
 ?>
-
+<section id="centercontent">
 <h1> Andrés gästbok</h1>
 
 <form action="functions/addPost.php" method="post">
@@ -30,6 +29,6 @@ Meddelande:<br> <textarea cols="40" rows="2" name="message"></textarea>
 <a href="../writeable/rawData" target="_blank">Visa datafil</a>
 <?php
 include("functions/printPosts.php");
-include("includes/guestInput.php");
+echo "</section>";
 include("includes/footer.php");
 ?>
