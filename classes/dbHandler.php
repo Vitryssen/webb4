@@ -28,6 +28,8 @@ class dbHandler extends Database{
             $db->connectionString->query($sql);
             $db->dbDisconnect();
         }
+        $this->posts = array();
+        $this->fetchPosts();
     }
     public function showPosts(){
         $tempPosts = $this->posts;
@@ -51,6 +53,8 @@ class dbHandler extends Database{
             $db->connectionString->query($sql);
             $db->dbDisconnect();
         }
+        $this->posts = array();
+        $this->fetchPosts();
     }
 }
 ?>

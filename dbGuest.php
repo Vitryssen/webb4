@@ -16,6 +16,7 @@ if(!isset($_SESSION['dbHandler'])){
 if(isset($_GET['delPostDb']) && isset($_SESSION['dbHandler'])){
     $dbHandler = unserialize($_SESSION['dbHandler']);
     $dbHandler->deletePost($_GET['delPostDb']);
+    $_SESSION['dbHandler'] = serialize($dbHandler);
 }
 ?>
 <section id="centercontent">
